@@ -1,6 +1,6 @@
 # Ox Example
 
-This is a simple example of how to use the Ox library to manage MongoDB schema migrations.
+This is a simple example of how to use the [Ox](https://github.com/fernandonogueira/Ox) library to manage MongoDB schema migrations.
 
 ## Usage
 
