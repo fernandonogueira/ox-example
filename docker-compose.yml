@@ -1,0 +1,7 @@
+# Docker compose file with MongoDB
+version: '3.8'
+services:
+  mongo:
+    image: mongo:5
+    ports:
+      - "27017:27017"
