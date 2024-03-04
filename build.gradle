@@ -25,7 +25,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
     implementation 'org.jetbrains.kotlin:kotlin-reflect'
-    implementation 'com.github.fernandonogueira:Ox:080f6d75fd'
+    implementation 'com.github.fernandonogueira:Ox:b4abe95774'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

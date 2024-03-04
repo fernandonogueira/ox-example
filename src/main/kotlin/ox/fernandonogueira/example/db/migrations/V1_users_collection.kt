@@ -16,7 +16,6 @@ class V1_users_collection : Migration {
       .ifNotExists()
       .recreateIfNotEquals()
       .addAttribute("email", OrderingType.ASC)
-      .dropDups()
       .execute(env)
   }
 
