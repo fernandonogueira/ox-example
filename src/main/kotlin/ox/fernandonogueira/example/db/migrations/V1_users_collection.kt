@@ -10,19 +10,21 @@ import ox.engine.structure.OrderingType
 class V1_users_collection : Migration {
 
   override fun up(env: OxEnvironment) {
-    OxAction.createIndex("idx_users_email")
-      .setCollection("users")
-      .unique()
-      .ifNotExists()
-      .recreateIfNotEquals()
-      .addAttribute("email", OrderingType.ASC)
-      .execute(env)
+    env.execute(
+      OxAction.createIndex("idx_users_email")
+        .setCollection("users")
+        .unique()
+        .ifNotExists()
+        .recreateIfNotEquals()
+        .addAttribute("email", OrderingType.ASC)
+    )
   }
 
   override fun down(env: OxEnvironment) {
-    OxAction.removeIndex("idx_users_email")
-      .setCollection("users")
-      .execute(env)
+    env.execute(
+      OxAction.removeIndex("idx_users_email")
+        .setCollection("users")
+    )
   }
 
 }

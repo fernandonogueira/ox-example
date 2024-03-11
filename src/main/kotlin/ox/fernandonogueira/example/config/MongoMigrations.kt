@@ -21,7 +21,7 @@ class MongoMigrations() {
   fun onApplicationEvent(event: ContextRefreshedEvent) {
     val mongo = MongoClient(ServerAddress(mongoHost))
     try {
-      Ox.setUp(
+      Ox.configure(
         mongo,
         "ox.fernandonogueira.example.db.migrations",
         "ox-example"

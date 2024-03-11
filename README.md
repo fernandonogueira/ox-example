@@ -4,6 +4,14 @@ This is a simple example of how to use the [Ox](https://github.com/fernandonogue
 
 ## Usage
 
+> [!NOTE]
+> Add your Github Package Registry credentials to the `gradle.properties` file.
+
+```properties
+gpr.user=your-username
+gpr.key=your-token
+```
+
 Run the docker compose file to start the MongoDB instance
 
 ```bash

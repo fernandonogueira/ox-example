@@ -16,7 +16,14 @@ java {
 
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
+    maven {
+        name = "github-ox"
+        url = uri("https://maven.pkg.github.com/fernandonogueira/ox")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_PACKAGES_USER")
+            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_PACKAGES_PAT")
+        }
+    }
 }
 
 dependencies {
@@ -25,7 +32,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
     implementation 'org.jetbrains.kotlin:kotlin-reflect'
-    implementation 'com.github.fernandonogueira:Ox:b4abe95774'
+    implementation 'com.github.fernandonogueira.ox:core:2.1.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
