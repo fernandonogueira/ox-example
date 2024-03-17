@@ -16,6 +16,7 @@ java {
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
     maven {
         name = "github-ox"
         url = uri("https://maven.pkg.github.com/fernandonogueira/ox")
@@ -32,7 +33,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
     implementation 'org.jetbrains.kotlin:kotlin-reflect'
-    implementation 'com.github.fernandonogueira.ox:core:2.1.0'
+    // GH Packages
+    //implementation 'com.github.fernandonogueira.ox:core:2.1.1'
+    // Jitpack
+    implementation 'com.github.fernandonogueira:ox:2.1.1'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
